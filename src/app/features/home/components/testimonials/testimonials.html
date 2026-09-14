@@ -1,0 +1,19 @@
+<section class="section-space" id="depoimentos" tabindex="-1" aria-labelledby="testimonials-title">
+  <div class="container">
+    <div class="heading">
+      <p class="eyebrow">Experiências e acolhimento</p>
+      <h2 id="testimonials-title">Depoimentos de pacientes</h2>
+      <p class="disclosure">Exemplos fictícios para demonstrar esta seção. Não são relatos de pacientes reais nem avaliações da médica.</p>
+    </div>
+    <div class="cards">
+      @for (example of examples; track example.topic) {
+        <article>
+          <span class="badge">Depoimento fictício</span>
+          <blockquote><p>“{{ example.text }}”</p></blockquote>
+          <h3>{{ example.topic }}</h3>
+          <p class="caption">Personagem ilustrativo · relato não real</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+<main id="conteudo" tabindex="-1">
+  <app-hero />
+
+  <section class="container section-space about" id="sobre" tabindex="-1" aria-labelledby="about-title">
+    <div class="about-heading">
+      <p class="eyebrow">Conheça a médica</p>
+      <h2 id="about-title">Dra. Lilian Leal</h2>
+      <p class="specialty-label">Otorrinolaringologia clínica e cirúrgica</p>
+    </div>
+    <div class="about-body">
+      <p class="lead">Uma trajetória na otorrinolaringologia, com atenção aos temas que fazem parte da sua vida.</p>
+      <p>Graduada em Medicina pela Escola Bahiana de Medicina e Saúde Pública, a Dra. Lilian Leal tem formação em Otorrinolaringologia pelo INOOA, em Salvador, e em Medicina do Sono pelo Instituto do Sono, em São Paulo.</p>
+      <p>Em seu perfil profissional, compartilha conteúdos sobre respiração nasal, rinossinusites, amígdalas, voz e sono — aproximando esses assuntos do dia a dia de quem busca informação sobre saúde.</p>
+      <a class="text-link" [href]="site.instagram" target="_blank" rel="noopener noreferrer">Conheça seu Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
+    </div>
+    <div class="formation-block" id="formacao" tabindex="-1">
+      <h3>Formação e trajetória</h3>
+      <div class="formation-grid">
+        @for (item of formation; track item.label) {
+          <article class="formation-card">
+            <span class="formation-mark" aria-hidden="true">✓</span>
+            <h4>{{ item.label }}</h4>
+            <p>{{ item.institution }}</p>
+            <span>{{ item.location }}</span>
+          </article>
+        }
+      </div>
+      <p class="formation-note">Título pela AMB e ABORL-CCF, conforme o perfil profissional da San Dieu. <a [href]="site.professionalProfile" target="_blank" rel="noopener noreferrer">Conheça a trajetória completa<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+    </div>
+  </section>
+
+  <app-health-gallery />
+
+  <section class="container section-space" id="sono" tabindex="-1" aria-labelledby="sleep-title">
+    <div class="sleep-panel">
+      <div class="sleep-copy">
+        <span class="sleep-icon"><app-health-icon name="moon" /></span>
+        <p class="eyebrow">Respiração durante o sono</p>
+        <h2 id="sleep-title">Dormir por horas<br>é o mesmo que<br><span>descansar bem?</span></h2>
+        <p>O ronco e a respiração durante a noite são temas frequentes no Instagram da médica. Observar como você dorme pode ajudar a organizar a conversa na consulta.</p>
+        <a class="text-link" [href]="site.instagram" target="_blank" rel="noopener noreferrer">Acompanhar os conteúdos <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
+      </div>
+      <div class="sleep-points">
+        <article><h3>Ronco que se repete</h3><p>O ronco frequente pode estar associado à apneia do sono e merece avaliação.</p></article>
+        <article><h3>Pausas na respiração</h3><p>Se alguém percebe interrupções na sua respiração enquanto você dorme, relate isso ao médico.</p></article>
+        <article><h3>Sonolência ao longo do dia</h3><p>Como você se sente ao acordar e durante o dia também faz parte da história do seu sono.</p></article>
+        <p class="sleep-note">Esses sinais não confirmam um diagnóstico por conta própria.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container faq-section section-space" id="duvidas" tabindex="-1" aria-labelledby="faq-title">
+    <div><p class="eyebrow">Dúvidas frequentes</p><h2 id="faq-title">Entender também<br>faz parte do cuidado.</h2><p>Respostas para começar a conversa, sem substituir uma avaliação médica.</p></div>
+    <div class="faq-list">
+      @for (faq of faqs; track faq.question) {
+        <details><summary>{{ faq.question }}<span aria-hidden="true">+</span></summary><p>{{ faq.answer }}</p></details>
+      }
+    </div>
+  </section>
+
+  <app-testimonials />
+
+  <section class="contact section-space" id="contato" tabindex="-1" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+      <div><p class="eyebrow">Informações para consulta</p><h2 id="contact-title">Seu próximo passo<br>pode ser uma conversa.</h2><p>Fale com a Clínica Otos para saber sobre horários e consultas com a Dra. Lilian Leal.</p><a class="text-link" [href]="site.instagram" target="_blank" rel="noopener noreferrer">Ver perfil da médica <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div>
+      <div class="location-card"><span class="location-label">Contato da clínica</span><h3>{{ site.clinic.name }}</h3><p>{{ site.clinic.address }}</p><p class="phone">{{ site.clinic.phoneLabel }}</p>@if (site.whatsapp) {<a class="button" [href]="site.whatsapp" target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>} @else {<a class="button" [href]="site.clinic.phoneHref">Ligar para a clínica <span aria-hidden="true">↗</span></a>}<p class="location-note">Entre em contato para consultar a disponibilidade de horários antes de se deslocar.</p></div>
+    </div>
+  </section>
+  <div class="container sources-note">Referências educativas: <a href="https://bvsms.saude.gov.br/ronco/" target="_blank" rel="noopener noreferrer">ronco<span class="sr-only"> (abre em nova aba)</span></a>, <a href="https://bvsms.saude.gov.br/bvs/dicas/235_sinusite.html" target="_blank" rel="noopener noreferrer">sinusite<span class="sr-only"> (abre em nova aba)</span></a> e <a href="https://bvsms.saude.gov.br/amidalite-ou-amigdalite/" target="_blank" rel="noopener noreferrer">amigdalite<span class="sr-only"> (abre em nova aba)</span></a> · Biblioteca Virtual em Saúde, Ministério da Saúde.</div>
+</main>

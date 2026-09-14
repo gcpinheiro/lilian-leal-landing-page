@@ -1,0 +1,29 @@
+.hero { background: var(--tint); padding-top: 48px; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 7%; }
+.hero-copy { padding-block: 24px; }
+h1 { font: 700 clamp(38px, 4.1vw, 58px)/1.12 var(--sans); letter-spacing: -2px; margin: 0 0 24px; }
+h1 span { color: var(--green); font-weight: 400; }
+.intro { max-width: 490px; color: var(--muted); font-size: 18px; margin-bottom: 26px; }
+.hero-actions { display: flex; gap: 12px 22px; flex-wrap: wrap; align-items: center; }
+.hero-registration { color: var(--muted); font-size: 12px; margin: 26px 0 0; line-height: 1.8; }
+.portrait { margin: 0; position: relative; padding-bottom: 22px; }
+.photo-window { aspect-ratio: 510 / 650; overflow: hidden; position: relative; border-radius: 32px 32px 100px 32px; background: #ded9d1; }
+.photo-window img { position: absolute; width: 115.883%; max-width: none; height: auto; left: 0; top: -37.693%; }
+figcaption { position: absolute; bottom: 0; left: 24px; right: 24px; border-radius: 16px; padding: 20px 24px; background: var(--surface); box-shadow: 0 10px 30px #28382d0d; }
+figcaption strong { display: block; font-size: 21px; }
+figcaption span { display: block; margin-top: 5px; font-size: 14px; color: var(--muted); }
+.topic-strip { display: flex; gap: 28px; justify-content: space-between; padding-block: 28px; margin-top: 38px; border-top: 1px solid var(--line); color: var(--green); font-size: 14px; font-weight: 600; }
+.topic-strip span { display: flex; align-items: center; gap: 12px; }
+.topic-strip span::before { content: ''; width: 8px; height: 8px; border: 2px solid var(--green-soft); border-radius: 50%; }
+@media(max-width: 1024px) { .hero-grid { gap: 4%; } h1 { font-size: 43px; } .intro { font-size: 16px; } }
+@media(max-width: 760px) {
+  .hero { padding-top: 20px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  h1 { font-size: clamp(35px, 8.8vw, 48px); letter-spacing: -1.4px; }
+  .hero-copy { padding-bottom: 0; }
+  .portrait { max-width: 470px; width: 100%; justify-self: center; }
+  .photo-window { aspect-ratio: 510 / 570; border-radius: 24px 24px 70px 24px; }
+  .photo-window img { top: -42.983%; }
+  figcaption { padding: 16px 20px; left: 16px; right: 16px; }
+  .topic-strip { flex-wrap: wrap; gap: 14px; margin-top: 24px; padding-block: 22px; }
+}
