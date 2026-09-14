@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './testimonials.scss',
 })
 export class Testimonials {
-  readonly examples = [
-    { topic: 'Escuta e acolhimento', text: 'Ter espaço para contar minhas dúvidas e conversar com calma fez diferença na experiência da consulta.' },
-    { topic: 'Explicações claras', text: 'Gostei de entender o que seria avaliado e de poder perguntar sobre cada etapa, sem sair com dúvidas.' },
-    { topic: 'Atenção ao dia a dia', text: 'A conversa sobre minha rotina e meu sono me ajudou a organizar o que eu queria levar para a avaliação.' },
-  ] as const;
+  readonly gabriel = {
+    name: 'Gabriel Castro',
+    excerpt: 'Em janeiro de 2026, iniciei com a Dra. Lilian o processo para a cirurgia de desvio de septo. Em todas as consultas, fui muito bem atendido. Recebi explicações claras sobre o procedimento e pude esclarecer minhas dúvidas.',
+    continuation: 'Ao longo do processo, a Dra. Lilian me ajudou dentro do que estava ao seu alcance para que a cirurgia fosse realizada. Ela se mostrou disponível, e a comunicação foi fácil durante todo esse período. Foi ela quem realizou minha cirurgia.',
+  } as const;
 }

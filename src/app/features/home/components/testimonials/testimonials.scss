@@ -1,11 +1,13 @@
 section { background: #f5f1e6; }
 .heading { max-width: 710px; margin: 0 auto 34px; text-align: center; }
-.disclosure { color: var(--muted); font-size: 15px; }
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cards { max-width: 780px; margin: 0 auto; }
+.badge.real { background: var(--tint); color: var(--green); }
+summary { cursor: pointer; padding: 14px 0; border-top: 1px solid var(--line); color: var(--green); font-size: 15px; font-weight: 600; }
+.read-less, details[open] .read-more { display: none; }
+details[open] .read-less { display: inline; }
 article { background: white; padding: 28px; border-radius: var(--radius); border: 1px solid #e1d9bf; }
 .badge { display: inline-block; padding: 7px 10px; background: #f1ebd7; color: #645817; border-radius: 8px; font-size: 12px; font-weight: 700; }
 blockquote { margin: 22px 0; color: var(--ink); }
 blockquote p { font-size: 17px; line-height: 1.75; }
 h3 { margin: 24px 0 6px; font-size: 17px; }
-.caption { font-size: 12px; color: var(--muted); margin: 0; }
-@media(max-width: 760px) { .cards { grid-template-columns: 1fr; } .heading { text-align: left; } }
+@media(max-width: 760px) { .heading { text-align: left; } }

@@ -7,9 +7,34 @@ export interface HealthArticle {
   image: string;
   alt: string;
   crop: string;
+  featured?: boolean;
 }
 
 export const HEALTH_ARTICLES: readonly HealthArticle[] = [
+  {
+    id: 'septoplastia', category: 'Respiração', featured: true,
+    title: 'Cirurgia do desvio de septo: conheça a septoplastia',
+    summary: 'Quando o desvio de septo dificulta a passagem do ar, a avaliação pode incluir a possibilidade de correção cirúrgica. Entenda o que orienta essa decisão.',
+    detail: 'O septo é a estrutura que separa as duas cavidades do nariz. A septoplastia busca corrigir seu desvio quando ele contribui para a obstrução nasal. Ter um desvio não significa precisar de cirurgia: sintomas, exame do nariz e outras causas de dificuldade para respirar orientam a indicação. Na consulta, converse sobre alternativas, riscos e recuperação; os resultados variam de pessoa para pessoa.',
+    image: '/images/tema-cirurgia-nasal.jpg', crop: 'model',
+    alt: 'Modelo anatômico de nariz e garganta apresentado em um post educativo; imagem ilustrativa.',
+  },
+  {
+    id: 'adenoides', category: 'Garganta',
+    title: 'Retirada das adenoides: o que é a adenoidectomia?',
+    summary: 'Localizadas atrás do nariz, as adenoides podem participar de quadros de obstrução respiratória quando aumentadas.',
+    detail: 'As adenoides são tecidos de defesa localizados atrás do nariz e não são as mesmas estruturas que as amígdalas. A adenoidectomia é a cirurgia para sua retirada. Ela pode ser considerada em situações como obstrução da respiração ou infecções recorrentes, conforme avaliação individual. A decisão considera os sintomas, o histórico e os benefícios e riscos de cada opção.',
+    image: '/images/tema-cirurgia-nasal.jpg', crop: 'model',
+    alt: 'Modelo anatômico em perfil de nariz e garganta, usado como ilustração geral da região.',
+  },
+  {
+    id: 'cornetos', category: 'Respiração',
+    title: 'Cirurgia dos cornetos: redução para a passagem do ar',
+    summary: 'Entenda por que o tratamento cirúrgico dos cornetos costuma envolver a redução do volume, preservando sua função.',
+    detail: 'Os cornetos são estruturas dentro do nariz que ajudam a aquecer, umidificar e filtrar o ar. Quando aumentados, podem contribuir para a obstrução nasal. Se o tratamento clínico não for suficiente, pode ser considerada uma cirurgia para reduzir seu volume, com preservação de tecido e função. Termos como turbinoplastia e turbinectomia parcial descrevem técnicas diferentes; a escolha depende da avaliação médica e não significa retirada completa dos cornetos.',
+    image: '/images/tema-cirurgia-nasal.jpg', crop: 'model',
+    alt: 'Modelo anatômico das vias aéreas superiores; ilustração geral, sem representar um procedimento cirúrgico.',
+  },
   {
     id: 'rinossinusite', category: 'Respiração', title: 'Nariz e seios da face: entendendo as rinossinusites',
     summary: 'Obstrução nasal, secreção e pressão no rosto: compreender os sintomas é o início da conversa.',

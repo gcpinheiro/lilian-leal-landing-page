@@ -25,8 +25,8 @@ export const HEALTH_TOPICS: readonly HealthTopic[] = [
 ];
 
 export const FAQS = [
+  { question: 'Todo desvio de septo precisa de cirurgia?', answer: 'Não. A septoplastia pode ser indicada quando o desvio contribui para a dificuldade de respirar pelo nariz. A decisão depende dos sintomas, do exame nasal e da avaliação de outras possíveis causas de obstrução. Na consulta, são discutidas as opções de tratamento e os benefícios e riscos da cirurgia para cada pessoa.' },
   { question: 'Todo ronco significa apneia do sono?', answer: 'Não. O ronco pode estar relacionado à apneia, mas não confirma o diagnóstico sozinho. Pausas respiratórias percebidas durante o sono e sonolência diurna são informações importantes para relatar na avaliação.' },
   { question: 'Infecções nas amígdalas sempre precisam de cirurgia?', answer: 'Não. A cirurgia é considerada em situações específicas, após avaliar a frequência das infecções, o histórico e as condições de cada pessoa. A indicação deve ser individualizada.' },
-  { question: 'Os conteúdos do Instagram substituem uma consulta?', answer: 'Não. Os conteúdos são educativos. Diagnóstico, indicação de exames e decisões de tratamento dependem de avaliação individual.' },
   { question: 'Como saber sobre horários e agendamento?', answer: 'Entre em contato com a Clínica Otos para consultar os horários da Dra. Lilian Leal e obter informações sobre agendamento.' },
 ] as const;

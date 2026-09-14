@@ -5,10 +5,11 @@ import { Hero } from './components/hero/hero';
 import { HealthIcon } from '../../shared/ui/health-icon';
 import { Testimonials } from './components/testimonials/testimonials';
 import { HealthGallery } from './components/health-gallery/health-gallery';
+import { ClinicLocation } from './components/clinic-location/clinic-location';
 
 @Component({
   selector: 'app-home-page',
-  imports: [Hero, HealthIcon, Testimonials, HealthGallery],
+  imports: [Hero, HealthIcon, Testimonials, HealthGallery, ClinicLocation],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss',
 })

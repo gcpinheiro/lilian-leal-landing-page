@@ -3,17 +3,19 @@
     <div class="heading">
       <p class="eyebrow">Experiências e acolhimento</p>
       <h2 id="testimonials-title">Depoimentos de pacientes</h2>
-      <p class="disclosure">Exemplos fictícios para demonstrar esta seção. Não são relatos de pacientes reais nem avaliações da médica.</p>
     </div>
     <div class="cards">
-      @for (example of examples; track example.topic) {
-        <article>
-          <span class="badge">Depoimento fictício</span>
-          <blockquote><p>“{{ example.text }}”</p></blockquote>
-          <h3>{{ example.topic }}</h3>
-          <p class="caption">Personagem ilustrativo · relato não real</p>
-        </article>
-      }
+      <article class="patient-story">
+        <span class="badge real">Relato de paciente</span>
+        <blockquote>
+          <p>{{ gabriel.excerpt }}</p>
+          <details>
+            <summary><span class="read-more">Ler depoimento completo</span><span class="read-less">Recolher depoimento</span></summary>
+            <p>{{ gabriel.continuation }}</p>
+          </details>
+        </blockquote>
+        <h3>{{ gabriel.name }}</h3>
+      </article>
     </div>
   </div>
 </section>

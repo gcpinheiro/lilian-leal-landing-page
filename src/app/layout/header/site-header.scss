@@ -1,4 +1,4 @@
-:host { display: block; background: var(--paper); border-bottom: 1px solid var(--line); }
+:host { display: block; position: sticky; top: 0; z-index: 30; background: var(--paper); border-bottom: 1px solid var(--line); max-height: 100dvh; overflow-y: auto; }
 .header { min-height: 106px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 17px; text-decoration: none; }
 .monogram { font: italic 52px/1 Georgia, serif; border-right: 1px solid var(--line); padding-right: 18px; }
@@ -10,6 +10,13 @@ nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
 nav .nav-social { border: 1px solid var(--line); border-radius: 30px; padding: 13px 22px; }
 .nav-social span { margin-left: 12px; }
 .menu-toggle { display: none; }
+@media(min-width: 761px) and (max-width: 1024px) {
+  nav { gap: 12px; }
+  nav a { font-size: 12px; }
+  nav .nav-social { padding-inline: 12px; }
+  .brand-name { font-size: 20px; }
+  .brand-field { letter-spacing: .3px; }
+}
 @media(max-width: 760px) {
   .header { min-height: 90px; flex-wrap: wrap; gap: 0; padding-block: 16px; }
   .brand { gap: 10px; }
