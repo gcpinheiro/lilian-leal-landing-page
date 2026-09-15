@@ -16,6 +16,9 @@ section { background: var(--tint); }
 .apnea img { left: -19.149%; top: -143.793%; }
 .rest img { left: -5.319%; top: -157.931%; }
 .model img { width: 197%; left: -63.333%; top: -249.586%; }
+.illustration { background: white; }
+.illustration img { inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 16px 16px 46px; }
+.card-copy .image-credit, .image-credit { font-size: 11px; line-height: 1.6; color: var(--muted); }
 .category { position: absolute; left: 20px; bottom: 18px; padding: 7px 12px; border-radius: 8px; background: white; color: var(--green); font-size: 12px; font-weight: 600; }
 .card-copy { padding: 26px; }
 h3 { font-size: 25px; letter-spacing: -.6px; line-height: 1.3; margin: 0; }

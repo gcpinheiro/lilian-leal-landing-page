@@ -18,19 +18,20 @@
       @for (article of articles(); track article.id) {
         <article class="health-card" [class.featured]="article.featured">
           <div [class]="'crop ' + article.crop">
-            <img [src]="article.image" [alt]="article.alt" width="591" height="1280" loading="lazy">
+            <img [src]="article.image" [alt]="article.alt" [width]="article.width ?? 591" [height]="article.height ?? 1280" loading="lazy">
             <span class="category">{{ article.category }}</span>
           </div>
           <div class="card-copy">
             @if (article.featured) {<p class="eyebrow">Cirurgia nasal em foco</p>}
             <h3>{{ article.title }}</h3>
             <p>{{ article.summary }}</p>
+            @if (article.credit; as credit) {<p class="image-credit"><a [href]="credit.source">{{ credit.author }}</a> · <a [href]="credit.licenseUrl">{{ credit.license }}</a></p>}
             @if (ready()) {<button class="explore" type="button" (click)="open(article, $event)" [attr.aria-label]="'Explorar tema: ' + article.title">Explorar tema <svg class="icon-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></button>}
           </div>
         </article>
       }
     </div>
-    <p class="note">Imagens ilustrativas dos conteúdos publicados. Não representam casos clínicos ou resultados de pacientes da médica. Informações educativas não substituem uma consulta.</p>
+    <p class="note">Imagens educativas. Não representam casos clínicos ou resultados de pacientes da médica. Informações educativas não substituem uma consulta.</p>
   </div>
 </section>
 
@@ -38,11 +39,12 @@
   <div class="reader-panel">
     <button class="close" type="button" (click)="close()" aria-label="Fechar tema" autofocus>×</button>
     @if (selected(); as article) {
-      <div [class]="'crop reader-image ' + article.crop"><img [src]="article.image" [alt]="article.alt" width="591" height="1280"></div>
+      <div [class]="'crop reader-image ' + article.crop"><img [src]="article.image" [alt]="article.alt" [width]="article.width ?? 591" [height]="article.height ?? 1280"></div>
       <div class="reader-copy" aria-live="polite">
         <p class="eyebrow">{{ article.category }}</p>
         <h3 id="reader-title">{{ article.title }}</h3>
         <p>{{ article.detail }}</p>
+        @if (article.credit; as credit) {<p class="image-credit"><a [href]="credit.source">{{ credit.author }}</a> · <a [href]="credit.licenseUrl">{{ credit.license }}</a></p>}
         <a class="text-link" [href]="site.instagram" target="_blank" rel="noopener noreferrer">Mais conteúdos no Instagram <svg class="icon-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span class="sr-only"> (abre em nova aba)</span></a>
         <p class="note">Imagem ilustrativa · conteúdo educativo.</p>
         <div class="reader-controls"><button type="button" (click)="move(-1)" aria-label="Tema anterior" [disabled]="articles().length < 2">←</button><span>Explorar outros temas</span><button type="button" (click)="move(1)" aria-label="Próximo tema" [disabled]="articles().length < 2">→</button></div>

@@ -8,6 +8,9 @@ export interface HealthArticle {
   alt: string;
   crop: string;
   featured?: boolean;
+  width?: number;
+  height?: number;
+  credit?: { author: string; source: string; license: string; licenseUrl: string };
 }
 
 export const HEALTH_ARTICLES: readonly HealthArticle[] = [
@@ -24,16 +27,18 @@ export const HEALTH_ARTICLES: readonly HealthArticle[] = [
     title: 'Retirada das adenoides: o que é a adenoidectomia?',
     summary: 'Localizadas atrás do nariz, as adenoides podem participar de quadros de obstrução respiratória quando aumentadas.',
     detail: 'As adenoides são tecidos de defesa localizados atrás do nariz e não são as mesmas estruturas que as amígdalas. A adenoidectomia é a cirurgia para sua retirada. Ela pode ser considerada em situações como obstrução da respiração ou infecções recorrentes, conforme avaliação individual. A decisão considera os sintomas, o histórico e os benefícios e riscos de cada opção.',
-    image: '/images/tema-cirurgia-nasal.jpg', crop: 'model',
-    alt: 'Modelo anatômico em perfil de nariz e garganta, usado como ilustração geral da região.',
+    image: '/images/tema-adenoides.svg', crop: 'illustration', width: 375, height: 305,
+    alt: 'Ilustração em perfil que localiza as adenoides atrás do nariz e as amígdalas na garganta; legendas em inglês.',
+    credit: { author: 'Cancer Research UK / Wikimedia Commons', source: 'https://commons.wikimedia.org/wiki/File:Diagram_showing_the_adenoids_and_tonsils_CRUK_280.svg', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/' },
   },
   {
     id: 'cornetos', category: 'Respiração',
     title: 'Cirurgia dos cornetos: redução para a passagem do ar',
     summary: 'Entenda por que o tratamento cirúrgico dos cornetos costuma envolver a redução do volume, preservando sua função.',
     detail: 'Os cornetos são estruturas dentro do nariz que ajudam a aquecer, umidificar e filtrar o ar. Quando aumentados, podem contribuir para a obstrução nasal. Se o tratamento clínico não for suficiente, pode ser considerada uma cirurgia para reduzir seu volume, com preservação de tecido e função. Termos como turbinoplastia e turbinectomia parcial descrevem técnicas diferentes; a escolha depende da avaliação médica e não significa retirada completa dos cornetos.',
-    image: '/images/tema-cirurgia-nasal.jpg', crop: 'model',
-    alt: 'Modelo anatômico das vias aéreas superiores; ilustração geral, sem representar um procedimento cirúrgico.',
+    image: '/images/tema-cornetos.png', crop: 'illustration', width: 500, height: 468,
+    alt: 'Ilustração anatômica da parede lateral do nariz, mostrando os cornetos superior, médio e inferior.',
+    credit: { author: 'Henry Vandyke Carter / Wikimedia Commons', source: 'https://commons.wikimedia.org/wiki/File:Gray855.png', license: 'Domínio público', licenseUrl: 'https://creativecommons.org/publicdomain/mark/1.0/' },
   },
   {
     id: 'rinossinusite', category: 'Respiração', title: 'Nariz e seios da face: entendendo as rinossinusites',
